@@ -5,14 +5,14 @@ module.exports = function getLoveTrianglesCount(preferences = []) {
 
   for (let i = 0; i < length; i++) {
     index = i + 1;
+
     if (index == array[i]) continue;
-    
+
     link = array[i];
     link = array[link - 1];
     link = array[link - 1];
-    if (link == index) {
-      count++;
-    }
+
+    if (link == index) count++;
   }
   return count/3;
 };
